@@ -27,6 +27,14 @@ h1, h2, h3, p, figure { margin: 0; }
 h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 a { color: inherit; text-underline-offset: .24em; touch-action: manipulation; }
 a:hover { color: var(--accent); }
+.outbound {
+  display: inline-block;
+  width: .69em;
+  height: .69em;
+  flex: none;
+  background: currentColor;
+  clip-path: polygon(29% 0, 100% 0, 100% 71%, 83% 71%, 83% 28%, 12% 100%, 0 88%, 72% 17%, 29% 17%);
+}
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 img { display: block; width: 100%; height: auto; }
 .frame {

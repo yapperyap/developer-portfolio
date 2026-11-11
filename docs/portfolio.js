@@ -10,7 +10,7 @@ function updatePreview() {
   pendingFrame = 0;
   if (!stage.matches) return;
 
-  const triggerLine = innerHeight * 0.43;
+  const triggerLine = Math.min(innerHeight * 0.2, 144);
   let nextProject = sections[0].dataset.project;
   for (const section of sections) {
     if (section.getBoundingClientRect().top <= triggerLine) {
