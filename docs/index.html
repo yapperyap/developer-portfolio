@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111715">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Yap’s developer portfolio. Explore Dinnerplate.party, CacheBuddy, and FlowDesk, three tools built for the web.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yap · Developer Portfolio">
+  <meta property="og:description" content="A creative workspace, an offline web extension, and a debate desk. Built for the browser.">
+  <title>Yap · Developer Portfolio</title>
+  <link rel="icon" href="data:,">
+  <link rel="preload" href="instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="portfolio.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="frame site-header">
+    <a class="wordmark" href="./" aria-label="Yap, portfolio home">Yap<span aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/yapperyap">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main" class="frame" tabindex="-1">
+    <div class="split">
+      <div class="reading">
+        <section class="intro" data-project="dinnerplate" aria-labelledby="intro-title">
+          <h1 id="intro-title">Yap builds<br>for the web.</h1>
+          <p class="lead">I build browser tools for creating, working offline, and keeping track of fast-moving ideas.</p>
+          <a class="primary" href="#work">Explore My Work <span aria-hidden="true">↓</span></a>
+        </section>
+
+        <section id="work" class="work" aria-labelledby="work-title">
+          <h2 id="work-title" data-reveal>Selected Work</h2>
+
+          <article id="dinnerplate" class="project" data-project="dinnerplate" aria-labelledby="dinnerplate-title">
+            <h3 id="dinnerplate-title" data-reveal translate="no">Dinnerplate.party</h3>
+            <p data-reveal>A local-first creative workspace with tools for photo, video, audio, and 3D. It brings editing and project storage into the browser and offers portable offline builds.</p>
+            <picture class="mobile-preview">
+              <img src="dinnerplate.webp" width="1000" height="687" alt="Dinnerplate’s music editor with a multi-track arrangement and instrument controls.">
+            </picture>
+            <div class="links" data-reveal>
+              <a href="https://dinnerplate.party/">Open Dinnerplate <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/yapperyap/dinnerplate-party">Offline Builds <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article id="cachebuddy" class="project" data-project="cachebuddy" aria-labelledby="cachebuddy-title">
+            <h3 id="cachebuddy-title" data-reveal translate="no">CacheBuddy</h3>
+            <p data-reveal>A Chromium and Firefox extension that saves snapshots of individual pages or linked pages on a site. Saved copies stay in the browser profile and can be reopened offline.</p>
+            <picture class="mobile-preview">
+              <img src="cachebuddy.webp" width="560" height="520" loading="lazy" decoding="async" alt="CacheBuddy’s extension popup showing page and website capture options and save progress.">
+            </picture>
+            <div class="links" data-reveal>
+              <a href="https://yapperyap.github.io/CacheBuddyExtension/">View CacheBuddy <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/yapperyap/CacheBuddyExtension">Source Code <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article id="flowdesk" class="project" data-project="flowdesk" aria-labelledby="flowdesk-title">
+            <h3 id="flowdesk-title" data-reveal translate="no">FlowDesk</h3>
+            <p data-reveal>A debate workspace for Lincoln–Douglas and Public Forum. Follow arguments across speeches, run speech and prep timers, and move rounds between devices using spreadsheet or JSON exports.</p>
+            <picture class="mobile-preview">
+              <img src="flowdesk.webp" width="1000" height="687" loading="lazy" decoding="async" alt="Illustration of a debate flow, with argument rows and columns for successive speeches.">
+            </picture>
+            <div class="links" data-reveal>
+              <a href="https://flowdesk.party/">Open FlowDesk <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </section>
+      </div>
+
+      <aside class="stage" aria-label="Project previews">
+        <div class="stage-art" aria-hidden="true">
+          <figure class="preview preview-dinner is-active" data-preview="dinnerplate">
+            <div class="dinner-art">
+              <img class="dinner-main" src="dinnerplate.webp" width="1000" height="687" alt="" fetchpriority="high">
+              <picture class="dinner-secondary">
+                <source media="(width > 48rem)" srcset="photo-editor.webp">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1000" height="687" alt="" decoding="async">
+              </picture>
+            </div>
+            <figcaption>Dinnerplate.party <span>Music &amp; photo editors</span></figcaption>
+          </figure>
+          <figure class="preview preview-cache" data-preview="cachebuddy">
+            <img src="cachebuddy.webp" width="560" height="520" alt="" loading="lazy" decoding="async">
+            <figcaption>CacheBuddy <span>Offline web snapshots</span></figcaption>
+          </figure>
+          <figure class="preview preview-flow" data-preview="flowdesk">
+            <img src="flowdesk.webp" width="1000" height="687" alt="" loading="lazy" decoding="async">
+            <figcaption>FlowDesk <span>Illustrated debate flow</span></figcaption>
+          </figure>
+        </div>
+        <nav class="stage-links" aria-label="Jump to a project">
+          <a href="#dinnerplate" aria-current="location">Dinnerplate</a>
+          <a href="#cachebuddy">CacheBuddy</a>
+          <a href="#flowdesk">FlowDesk</a>
+        </nav>
+      </aside>
+    </div>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+      <h2 id="about-title" data-reveal>About Me</h2>
+      <div>
+        <p data-reveal>I’m Yap, an independent developer. I’m interested in how much a browser can do on its own, from editing media to keeping a page readable offline.</p>
+        <p data-reveal>I build around real workflows. A project should be easy to reopen, export, or take to another device when you need it.</p>
+        <a href="https://github.com/yapperyap" class="text-link" data-reveal>Find Me on GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="frame site-footer">
+    <a class="wordmark" href="./" aria-label="Yap, portfolio home">Yap<span aria-hidden="true">.</span></a>
+    <div>
+      <p>© 2026 Yap</p>
+      <a href="site-notice.html">Privacy &amp; Accessibility</a>
+    </div>
+  </footer>
+</body>
+</html>
