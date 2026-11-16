@@ -1,0 +1,6 @@
+# Local design tooling and audits are not part of the published project.
+.agents/
+.taste-skill/
+__pycache__/
+.pytest_cache/
+*.py[cod]
