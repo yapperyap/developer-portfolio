@@ -1,6 +1,10 @@
 # Yap’s developer portfolio
 
-A static GitHub Pages portfolio featuring Dinnerplate.party, CacheBuddy, and FlowDesk.
+
+https://yapperyap.github.io/developer-portfolio/
+
+
+A static GitHub Pages portfolio for @yapperyap.
 
 ## Preview locally
 
