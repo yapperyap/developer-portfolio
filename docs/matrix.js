@@ -39,8 +39,7 @@
   if (!canvas || !toggle) return;
   const context = canvas.getContext('2d', { alpha: true });
   if (!context) return;
-  const preference = matchMedia('(prefers-reduced-motion: reduce)');
-  let paused = preference.matches;
+  let paused = false;
   let frozenScroll = scrollY;
   let visualScroll = scrollY;
   let targetScroll = scrollY;
@@ -88,14 +87,7 @@
     updateToggle();
     schedule();
   });
-  preference.addEventListener('change', () => {
-    paused = preference.matches;
-    frozenScroll = scrollY;
-    visualScroll = scrollY;
-    targetScroll = scrollY;
-    updateToggle();
-    schedule();
-  });
+
   addEventListener('scroll', () => { targetScroll = scrollY; if (!paused) schedule(); }, { passive: true });
   addEventListener('resize', resize, { passive: true });
   document.addEventListener('visibilitychange', () => { if (!document.hidden) schedule(); });
