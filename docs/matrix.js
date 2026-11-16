@@ -5,7 +5,7 @@
     const glyphs = [];
     const spacing = Math.max(24, width / 110);
     const characters = '01{}[]<>/+=:ABCDEF';
-    const distance = reducedMotion ? 0 : scroll;
+    const distance = reducedMotion ? 0 : scroll * 0.5;
     const phase = Math.floor(distance / 32);
     for (let column = 0; column * spacing + 4 < width; column++) {
       const seed = (column * 7919 + 104729) % 65521;
@@ -57,7 +57,7 @@
     context.font = '13px ui-monospace, monospace';
     const glyphs = createRainGlyphs(width, height, paused ? frozenScroll : visualScroll, false);
     for (const glyph of glyphs) {
-      context.fillStyle = glyph.opacity === 1 ? '#c6ffd5' : `rgba(46, 240, 110, ${glyph.opacity})`;
+      context.fillStyle = glyph.opacity === 1 ? '#e3e5ed' : `rgba(157, 165, 184, ${glyph.opacity})`;
       context.fillText(glyph.character, glyph.x, glyph.y);
     }
     if (!paused && Math.abs(targetScroll - visualScroll) > 0.01 && !document.hidden) frame = requestAnimationFrame(draw);
@@ -76,9 +76,10 @@
     schedule();
   }
   function updateToggle() {
+    document.documentElement.dataset.motionPaused = String(paused);
     toggle.hidden = false;
     toggle.setAttribute('aria-pressed', String(!paused));
-    toggle.textContent = paused ? 'Matrix: paused' : 'Matrix: scroll';
+    toggle.textContent = paused ? 'Motion: paused' : 'Motion: on';
   }
   toggle.addEventListener('click', () => {
     if (!paused) frozenScroll = visualScroll;

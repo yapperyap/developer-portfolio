@@ -1,110 +1,68 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-type="software">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#020904">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="software">
+  <meta name="theme-color" content="#101114">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Yap builds software for making things, thinking clearly, and working offline. Explore Dinnerplate, FlowDesk, SAT Study Room, and CacheBuddy.">
+  <meta name="description" content="Yap — independent developer. Creative software, browser extensions, and tools for study and debate.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Yap — Independent Developer">
-  <meta property="og:description" content="Creative tools, browser extensions, and focused workspaces. Software built around what you want to do.">
+  <meta property="og:description" content="Creative software, browser extensions, and tools for study and debate.">
   <title>Yap — Independent Developer</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=10">
-  <script defer src="matrix.js?v=4"></script>
+  <link rel="preload" href="schibsted-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=15">
+  <script defer src="matrix.js?v=6"></script>
 </head>
 <body id="top">
   <canvas id="matrix-background" aria-hidden="true"></canvas>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="frame header-inner">
-      <a class="wordmark" href="./" aria-label="Yap, portfolio home" translate="no">yap<span aria-hidden="true">_</span></a>
-      <nav aria-label="Main navigation">
-        <a class="button primary" href="#work">Work</a>
-        <a class="button primary" href="#about">About</a>
-        <a class="button primary" href="https://github.com/yapperyap">GitHub <span aria-hidden="true">↗</span></a>
-      </nav>
-    </div>
-  </header>
+  <header class="site-header"><div class="frame header-inner">
+    <a class="wordmark" href="./" aria-label="Yap, portfolio home" translate="no">yap<span aria-hidden="true">_</span></a>
+    <button class="button motion-toggle" id="matrix-toggle" type="button" aria-label="Decorative animations" aria-pressed="true" hidden>Motion: on</button>
+    <nav aria-label="Main navigation"><a class="button" href="#work">Work</a><a class="button" href="#about">About</a><a class="button" href="https://github.com/yapperyap">GitHub <span aria-hidden="true">↗</span></a></nav>
+  </div></header>
   <main id="main" tabindex="-1">
     <section class="intro frame" aria-labelledby="intro-title">
-      <div class="terminal-window">
-      <div class="terminal-titlebar"><span translate="no">yap@portfolio: ~</span><button class="button primary" id="matrix-toggle" type="button" aria-label="Scroll-driven Matrix background" aria-pressed="true" hidden>Matrix: scroll</button></div>
-      <div class="terminal-content">
-      <p class="intro-name"><span class="prompt-path" aria-hidden="true">yap@portfolio:~$ </span><span translate="no">whoami</span></p>
-      <p class="intro-role">Yap / Independent developer</p>
-      <h1 id="intro-title">Good software.<br>More possibilities.</h1>
-      <div class="intro-bottom">
-        <p>I build creative tools, browser extensions, and focused workspaces. Thoughtful software that helps you do more, with less in the way.</p>
-        <a class="button primary" href="#work">Explore the work <span aria-hidden="true">↓</span></a>
-      </div>
-      </div>
-      </div>
+      <p class="eyebrow">Yap / Independent developer</p>
+      <h1 id="intro-title">Software for<br><span>making things.</span></h1>
+      <div class="intro-bottom"><p>Creative tools, browser extensions,<br class="desktop-break"> and focused workspaces.</p><div class="intro-actions"><a class="button primary" href="#work">Explore projects <span aria-hidden="true">↓</span></a></div></div>
     </section>
-
-    <section id="work" class="frame work" aria-labelledby="work-title">
-      <div class="section-heading"><h2 id="work-title">Selected work</h2><p>Built to be used.</p></div>
+    <section id="work" class="work" aria-labelledby="work-title">
+      <div class="frame section-heading"><h2 id="work-title">Selected work</h2></div>
       <article id="dinnerplate" class="project dinnerplate" aria-labelledby="dinnerplate-title">
-        <div class="project-copy">
-          <p class="category">Creative software</p>
-          <h3 id="dinnerplate-title" translate="no">Dinnerplate.party</h3>
-          <p class="project-line">A whole workshop.<br>One place to make things.</p>
-          <p class="description">Edit photos, cut video, compose music, and build in 3D. A local-first creative toolkit, with your projects on your device.</p>
-          <div class="links">
-            <a class="button light" href="https://dinnerplate.party/">Open Dinnerplate <span aria-hidden="true">↗</span></a>
-            <a class="button primary" href="https://github.com/yapperyap/dinnerplate-party">Source &amp; offline builds <span aria-hidden="true">↗</span></a>
+        <div class="project-inner frame">
+          <div class="project-copy"><h3 id="dinnerplate-title" translate="no">Dinnerplate.party</h3><p class="description">Photo, video, music, and 3D tools. Your projects stay on your device.</p><div class="links"><a class="button" href="https://dinnerplate.party/">Open Dinnerplate <span aria-hidden="true">↗</span></a><a class="button" href="https://github.com/yapperyap/dinnerplate-party">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          <div class="project-visual dinner-gallery">
+            <figure class="product-window music-window"><img src="dinnerplate.webp" width="2880" height="1980" alt="Dinnerplate music editor with a multitrack arrangement, beat sequencer, and instrument controls." fetchpriority="high"></figure>
+            <figure class="product-window photo-window"><img src="photo-editor.webp" width="2880" height="1980" alt="Dinnerplate photo editor with brush tools, layers, and adjustment controls." loading="lazy" decoding="async"></figure>
           </div>
         </div>
-        <div class="dinner-gallery">
-          <figure class="product-window music-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Music editor</span></div><img src="dinnerplate.webp" width="2880" height="1980" alt="Dinnerplate music editor in One Dark theme with a multitrack arrangement, beat sequencer, and instrument controls." fetchpriority="high"></figure>
-          <figure class="product-window photo-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Photo editor</span></div><img src="photo-editor.webp" width="2880" height="1980" alt="Dinnerplate photo editor in One Dark theme with a transparent canvas, brush tools, layers, and adjustment controls." loading="lazy" decoding="async"></figure>
-        </div>
-        <div class="project-footnote"><span>Photo. Video. Audio. Music. 3D.</span><span>Local-first by design.</span></div>
       </article>
-
-      <div class="project-pair">
-        <article id="flowdesk" class="project flowdesk" aria-labelledby="flowdesk-title">
-          <div class="project-copy">
-            <p class="category">Debate workspace</p>
-            <h3 id="flowdesk-title" translate="no">FlowDesk</h3>
-            <p class="project-line">Keep up with the argument.</p>
-            <p class="description">Follow a round from opening to rebuttal. A workspace for Lincoln–Douglas and Public Forum, with speech timers and portable flows.</p>
-            <div class="links"><a class="button primary" href="https://flowdesk.party/">Open FlowDesk <span aria-hidden="true">↗</span></a></div>
-          </div>
-          <figure class="pair-image"><img src="flowdesk-live.webp" width="2880" height="1980" loading="lazy" decoding="async" alt="FlowDesk’s debate workspace with speech timers, round organization, and columns for successive speeches."></figure>
-        </article>
-        <article id="sat-study-room" class="project sat" aria-labelledby="sat-title">
-          <div class="project-copy">
-            <p class="category">Learning tools</p>
-            <h3 id="sat-title" translate="no">SAT Study Room</h3>
-            <p class="project-line">Less friction. More focus.</p>
-            <p class="description">Practice by subject, topic, and difficulty. Check answer explanations, track progress on your device, and take a portable version offline.</p>
-            <div class="links"><a class="button primary" href="https://yapperyap.github.io/sat-study-room/">Start practicing <span aria-hidden="true">↗</span></a><a class="button primary" href="https://github.com/yapperyap/sat-study-room">Source <span aria-hidden="true">↗</span></a></div>
-          </div>
-          <figure class="pair-image"><img src="sat-focus-mode.webp" width="2880" height="1980" loading="lazy" decoding="async" alt="SAT Study Room in dark Focus mode: reading passages and question with four answer choices, an Unfocus control, timer, and question navigation; no settings dialogs."></figure>
-        </article>
-      </div>
-
+      <article id="flowdesk" class="project flowdesk" aria-labelledby="flowdesk-title">
+        <div class="project-inner frame">
+          <div class="project-copy"><h3 id="flowdesk-title" translate="no">FlowDesk</h3><p class="description">Debate flows, speech timers, and portable rounds for LD and PF.</p><div class="links"><a class="button" href="https://flowdesk.party/">Open FlowDesk <span aria-hidden="true">↗</span></a></div></div>
+          <figure class="project-visual product-window"><img src="flowdesk-live.webp" width="2880" height="1980" loading="lazy" decoding="async" alt="FlowDesk debate workspace with speech timers and columns for successive speeches."></figure>
+        </div>
+      </article>
+      <article id="sat-study-room" class="project sat" aria-labelledby="sat-title">
+        <div class="project-inner frame">
+          <div class="project-copy"><h3 id="sat-title" translate="no">SAT Study Room</h3><p class="description">Targeted practice, answer explanations, and on-device progress.</p><div class="links"><a class="button" href="https://yapperyap.github.io/sat-study-room/">Start practicing <span aria-hidden="true">↗</span></a><a class="button" href="https://github.com/yapperyap/sat-study-room">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          <figure class="project-visual product-window"><img src="sat-focus-mode.webp" width="2880" height="1980" loading="lazy" decoding="async" alt="SAT Study Room in Focus mode with a reading passage, answer choices, and question navigation."></figure>
+        </div>
+      </article>
       <article id="cachebuddy" class="project cachebuddy" aria-labelledby="cachebuddy-title">
-        <div class="project-copy">
-          <p class="category">Browser extension</p>
-          <h3 id="cachebuddy-title" translate="no">CacheBuddy</h3>
-          <p class="project-line">The internet isn’t always there.<br>Your saved pages can be.</p>
-          <p class="description">Save pages and linked public pages for offline reading. Static snapshots stay in your browser profile, ready when the connection isn’t.</p>
-          <div class="links"><a class="button primary" href="https://yapperyap.github.io/CacheBuddyExtension/">Get CacheBuddy <span aria-hidden="true">↗</span></a><a class="button primary" href="https://github.com/yapperyap/CacheBuddyExtension">Source <span aria-hidden="true">↗</span></a></div>
-          <p class="compatibility">For Chromium &amp; Firefox</p>
+        <div class="project-inner frame">
+          <div class="project-copy"><h3 id="cachebuddy-title" translate="no">CacheBuddy</h3><p class="description">Save pages for offline reading.<br>For Chromium and Firefox.</p><div class="links"><a class="button" href="https://yapperyap.github.io/CacheBuddyExtension/">Get CacheBuddy <span aria-hidden="true">↗</span></a><a class="button" href="https://github.com/yapperyap/CacheBuddyExtension">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          <div class="project-visual cache-image"><figure class="product-window"><img src="cachebuddy.webp" width="1680" height="1527" loading="lazy" decoding="async" alt="CacheBuddy extension showing page and website save options."></figure></div>
         </div>
-        <figure class="cache-image"><img src="cachebuddy.webp" width="1680" height="1527" loading="lazy" decoding="async" alt="CacheBuddy’s dark extension popup showing page and website save options before a web page is selected."></figure>
       </article>
     </section>
-
-    <section id="about" class="about frame" aria-labelledby="about-title">
-      <div><p class="category">The person behind the projects</p><h2 id="about-title">Curiosity, turned<br>into software.</h2></div>
-      <div class="about-copy"><p>I’m Yap, an independent developer. I make software for the things I want to do: create, learn, keep track of ideas, and keep working when the connection drops.</p><p>My projects span media editing, browser extensions, and tools for study and debate. Different problems, the same goal: make something genuinely useful and give the details the attention they deserve.</p><a class="button primary" href="https://github.com/yapperyap">Explore my GitHub <span aria-hidden="true">↗</span></a></div>
-    </section>
-    <section class="contact" aria-labelledby="contact-title"><div class="frame contact-inner"><div><p>Have something in mind?</p><h2 id="contact-title">Let’s make it useful.</h2></div><a class="button primary" href="mailto:yapperyapemail@proton.me">Get in touch <span aria-hidden="true">↗</span></a></div></section>
+    <section id="about" class="about frame" aria-labelledby="about-title"><h2 id="about-title">About</h2><div><p>I’m Yap. I build software for creating, learning, and working offline.</p><a class="button" href="mailto:yapperyapemail@proton.me">Get in touch <span aria-hidden="true">↗</span></a></div></section>
   </main>
-  <footer class="frame site-footer"><a class="wordmark" href="#top" aria-label="Yap, back to top" translate="no">yap<span aria-hidden="true">_</span></a><p>Independent software. Thoughtfully built.</p><a class="button primary" href="site-notice.html">Privacy &amp; accessibility</a></footer>
+  <footer class="frame site-footer"><a class="wordmark" href="#top" aria-label="Yap, back to top" translate="no">yap_</a><a class="button" href="site-notice.html">Privacy &amp; accessibility</a></footer>
 </body>
 </html>
