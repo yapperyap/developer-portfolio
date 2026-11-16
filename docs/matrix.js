@@ -39,7 +39,9 @@
   if (!canvas || !toggle) return;
   const context = canvas.getContext('2d', { alpha: true });
   if (!context) return;
-  let paused = false;
+  const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
+  let userMotion = null; // No persistence: each visit starts with accessibility defaults.
+  let paused = motionPreference.matches;
   let frozenScroll = scrollY;
   let visualScroll = scrollY;
   let targetScroll = scrollY;
@@ -79,14 +81,24 @@
     document.documentElement.dataset.motionPaused = String(paused);
     toggle.hidden = false;
     toggle.setAttribute('aria-pressed', String(!paused));
-    toggle.textContent = paused ? 'Motion: paused' : 'Motion: on';
+    toggle.textContent = 'Toggle Motion';
+    toggle.title = paused
+      ? (motionPreference.matches ? 'Enable motion for this visit, overriding reduced motion' : 'Enable motion')
+      : 'Disable motion';
   }
-  toggle.addEventListener('click', () => {
-    if (!paused) frozenScroll = visualScroll;
-    paused = !paused;
+  function setPaused(nextPaused) {
+    if (!paused && nextPaused) frozenScroll = visualScroll;
+    paused = nextPaused;
     targetScroll = scrollY;
     updateToggle();
     schedule();
+  }
+  toggle.addEventListener('click', () => {
+    userMotion = paused;
+    setPaused(!userMotion);
+  });
+  motionPreference.addEventListener('change', event => {
+    if (userMotion === null) setPaused(event.matches);
   });
 
   addEventListener('scroll', () => { targetScroll = scrollY; if (!paused) schedule(); }, { passive: true });

@@ -14,50 +14,51 @@
   <title>Yap — Independent Developer</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="schibsted-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=15">
-  <script defer src="matrix.js?v=6"></script>
+  <link rel="stylesheet" href="styles.css?v=22">
+  <script defer src="matrix.js?v=8"></script>
+  <script defer src="site.js?v=3"></script>
 </head>
 <body id="top">
   <canvas id="matrix-background" aria-hidden="true"></canvas>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header"><div class="frame header-inner">
     <a class="wordmark" href="./" aria-label="Yap, portfolio home" translate="no">yap<span aria-hidden="true">_</span></a>
-    <button class="button motion-toggle" id="matrix-toggle" type="button" aria-label="Decorative animations" aria-pressed="true" hidden>Motion: on</button>
-    <nav aria-label="Main navigation"><a class="button" href="#work">Work</a><a class="button" href="#about">About</a><a class="button" href="https://github.com/yapperyap">GitHub <span aria-hidden="true">↗</span></a></nav>
+    <button class="button motion-toggle" id="matrix-toggle" type="button" aria-label="Toggle Motion" aria-pressed="true" hidden>Toggle Motion</button>
+    <nav aria-label="Main navigation"><a class="button" href="#work">Work</a><a class="button" href="#about">About</a><a class="button icon-button" href="https://github.com/yapperyap" aria-label="GitHub profile" title="GitHub profile"><img class="github-mark" src="github-mark.svg" width="20" height="20" alt="" aria-hidden="true"></a></nav>
+    <details class="mobile-menu"><summary class="button">Menu</summary><nav aria-label="Mobile navigation"><a class="button" href="#work">Work</a><a class="button" href="#about">About</a><a class="button icon-button" href="https://github.com/yapperyap" aria-label="GitHub profile" title="GitHub profile"><img class="github-mark" src="github-mark.svg" width="20" height="20" alt="" aria-hidden="true"></a></nav></details>
   </div></header>
   <main id="main" tabindex="-1">
     <section class="intro frame" aria-labelledby="intro-title">
-      <p class="eyebrow">Yap / Independent developer</p>
+
       <h1 id="intro-title">Software for<br><span>making things.</span></h1>
       <div class="intro-bottom"><p>Creative tools, browser extensions,<br class="desktop-break"> and focused workspaces.</p><div class="intro-actions"><a class="button primary" href="#work">Explore projects <span aria-hidden="true">↓</span></a></div></div>
     </section>
-    <section id="work" class="work" aria-labelledby="work-title">
-      <div class="frame section-heading"><h2 id="work-title">Selected work</h2></div>
+    <section id="work" class="work" aria-label="Projects">
       <article id="dinnerplate" class="project dinnerplate" aria-labelledby="dinnerplate-title">
         <div class="project-inner frame">
-          <div class="project-copy"><h3 id="dinnerplate-title" translate="no">Dinnerplate.party</h3><p class="description">Photo, video, music, and 3D tools. Your projects stay on your device.</p><div class="links"><a class="button" href="https://dinnerplate.party/">Open Dinnerplate <span aria-hidden="true">↗</span></a><a class="button" href="https://github.com/yapperyap/dinnerplate-party">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          <div class="project-copy"><h2 id="dinnerplate-title" translate="no"><a class="project-title-link" href="https://dinnerplate.party/">Dinnerplate.party</a></h2><p class="description">Photo, video, music, and 3D tools. Your projects stay on your device.</p><div class="links"><a class="button" href="https://dinnerplate.party/" aria-label="Open Dinnerplate">Open</a><a class="button icon-button" href="https://github.com/yapperyap/dinnerplate-party" aria-label="Dinnerplate on GitHub" title="Dinnerplate on GitHub"><img class="github-mark" src="github-mark.svg" width="20" height="20" alt="" aria-hidden="true"></a></div></div>
           <div class="project-visual dinner-gallery">
-            <figure class="product-window music-window"><img src="dinnerplate.webp" width="2880" height="1980" alt="Dinnerplate music editor with a multitrack arrangement, beat sequencer, and instrument controls." fetchpriority="high"></figure>
-            <figure class="product-window photo-window"><img src="photo-editor.webp" width="2880" height="1980" alt="Dinnerplate photo editor with brush tools, layers, and adjustment controls." loading="lazy" decoding="async"></figure>
+            <div class="image-halo"><figure class="product-window music-window"><img src="dinnerplate.webp" width="2880" height="1980" alt="Dinnerplate music editor with a multitrack arrangement, beat sequencer, and instrument controls." fetchpriority="high"></figure></div>
+            <div class="image-halo photo-halo"><figure class="product-window photo-window"><img src="photo-editor.webp" width="2880" height="1980" alt="Dinnerplate photo editor with brush tools, layers, and adjustment controls." loading="lazy" decoding="async"></figure></div>
           </div>
         </div>
       </article>
       <article id="flowdesk" class="project flowdesk" aria-labelledby="flowdesk-title">
         <div class="project-inner frame">
-          <div class="project-copy"><h3 id="flowdesk-title" translate="no">FlowDesk</h3><p class="description">Debate flows, speech timers, and portable rounds for LD and PF.</p><div class="links"><a class="button" href="https://flowdesk.party/">Open FlowDesk <span aria-hidden="true">↗</span></a></div></div>
-          <figure class="project-visual product-window"><img src="flowdesk-live.webp" width="2880" height="1980" loading="lazy" decoding="async" alt="FlowDesk debate workspace with speech timers and columns for successive speeches."></figure>
+          <div class="project-copy"><h2 id="flowdesk-title" translate="no"><a class="project-title-link" href="https://flowdesk.party/">FlowDesk</a></h2><p class="description">Debate flows, speech timers, and portable rounds for LD and PF.</p><div class="links"><a class="button" href="https://flowdesk.party/" aria-label="Open FlowDesk">Open</a></div></div>
+          <div class="project-visual image-halo"><figure class="product-window"><img src="flowdesk-live.webp" width="2880" height="1980" loading="lazy" decoding="async" alt="FlowDesk debate workspace with speech timers and columns for successive speeches."></figure></div>
         </div>
       </article>
       <article id="sat-study-room" class="project sat" aria-labelledby="sat-title">
         <div class="project-inner frame">
-          <div class="project-copy"><h3 id="sat-title" translate="no">SAT Study Room</h3><p class="description">Targeted practice, answer explanations, and on-device progress.</p><div class="links"><a class="button" href="https://yapperyap.github.io/sat-study-room/">Start practicing <span aria-hidden="true">↗</span></a><a class="button" href="https://github.com/yapperyap/sat-study-room">GitHub <span aria-hidden="true">↗</span></a></div></div>
-          <figure class="project-visual product-window"><img src="sat-focus-mode.webp" width="2880" height="1980" loading="lazy" decoding="async" alt="SAT Study Room in Focus mode with a reading passage, answer choices, and question navigation."></figure>
+          <div class="project-copy"><h2 id="sat-title" translate="no"><a class="project-title-link" href="https://yapperyap.github.io/sat-study-room/">SAT Study Room</a></h2><p class="description">Targeted practice, answer explanations, and on-device progress.</p><div class="links"><a class="button" href="https://yapperyap.github.io/sat-study-room/" aria-label="Open SAT Study Room">Open</a><a class="button icon-button" href="https://github.com/yapperyap/sat-study-room" aria-label="SAT Study Room on GitHub" title="SAT Study Room on GitHub"><img class="github-mark" src="github-mark.svg" width="20" height="20" alt="" aria-hidden="true"></a></div></div>
+          <div class="project-visual image-halo"><figure class="product-window"><img src="sat-focus-mode.webp" width="2880" height="1980" loading="lazy" decoding="async" alt="SAT Study Room in Focus mode with a reading passage, answer choices, and question navigation."></figure></div>
         </div>
       </article>
       <article id="cachebuddy" class="project cachebuddy" aria-labelledby="cachebuddy-title">
         <div class="project-inner frame">
-          <div class="project-copy"><h3 id="cachebuddy-title" translate="no">CacheBuddy</h3><p class="description">Save pages for offline reading.<br>For Chromium and Firefox.</p><div class="links"><a class="button" href="https://yapperyap.github.io/CacheBuddyExtension/">Get CacheBuddy <span aria-hidden="true">↗</span></a><a class="button" href="https://github.com/yapperyap/CacheBuddyExtension">GitHub <span aria-hidden="true">↗</span></a></div></div>
-          <div class="project-visual cache-image"><figure class="product-window"><img src="cachebuddy.webp" width="1680" height="1527" loading="lazy" decoding="async" alt="CacheBuddy extension showing page and website save options."></figure></div>
+          <div class="project-copy"><h2 id="cachebuddy-title" translate="no"><a class="project-title-link" href="https://yapperyap.github.io/CacheBuddyExtension/">CacheBuddy</a></h2><p class="description">Save pages for offline reading.<br>For Chromium and Firefox.</p><div class="links"><a class="button" href="https://yapperyap.github.io/CacheBuddyExtension/" aria-label="Open CacheBuddy">Open</a><a class="button icon-button" href="https://github.com/yapperyap/CacheBuddyExtension" aria-label="CacheBuddy on GitHub" title="CacheBuddy on GitHub"><img class="github-mark" src="github-mark.svg" width="20" height="20" alt="" aria-hidden="true"></a></div></div>
+          <div class="project-visual cache-image"><div class="image-halo"><figure class="product-window"><img src="cachebuddy.webp" width="1680" height="1527" loading="lazy" decoding="async" alt="CacheBuddy extension showing page and website save options."></figure></div></div>
         </div>
       </article>
     </section>
